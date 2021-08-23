@@ -1,2 +1,2 @@
-# Exerc-ciosJS
+# ExerciciosJS
 Exercícios de JS feitos em capacitação.
