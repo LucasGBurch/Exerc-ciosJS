@@ -1,0 +1,86 @@
+// 1) Crie uma variável mesmoNome que verifica se nomeDoFulano é igual a nomeDoBeltrano;
+
+nomeDoFulano = "Du"
+nomeDoBeltrano = "Dudu"
+
+mesmoNome1 = (nomeDoFulano == nomeDoBeltrano)
+mesmoNome2 = (nomeDoFulano != nomeDoBeltrano)
+
+
+// 2) Crie uma variável maiorDeIdade que verifica se idade é de um adulto;
+
+idade = 17
+maiorDeIdade = (idade >= 18)
+menorDeIdade = (idade < 18)
+
+
+// 3) Crie uma variável valorComJuros que calcula o valor de um boleto acrescido de 10% de juros por atraso;
+
+valorBoleto = 100
+valorComJuros = valorBoleto * 1.1
+
+
+// 4) Faça a representação da fórmula de média aritmética, considerando um conjunto de elementos com 5 elementos nomeados como item1, item2, item3, item4 e item5;
+
+item1 = 1
+item2 = 2
+item3 = 3
+item4 = 4
+item5 = 5
+
+media = (item1 + item2 + item3 + item4 + item5) / 5
+
+
+// 5) O lucro bruto de uma empresa é representado pela receita líquida de vendas menos o custo dos produtos vendidos.
+// A margem bruta de uma empresa é calculada pela divisão do lucro bruto pela receita líquida de vendas.
+// Faça a representação da fórmula da margem bruta, multiplicando o resultado final por 100 para obter o valor percentual;
+
+receitaLiquida = 2000
+custoProdutos = 799
+
+lucroBruto = receitaLiquida - custoProdutos
+
+margemBruta = ((lucroBruto / receitaLiquida) * 100)
+.toFixed(2) // Função para reduzir casas decimais
+
+console.log("1) Nome igual? " + mesmoNome1)
+console.log("1) Nome diferente? " + mesmoNome2)
+console.log("\n2) De maior? " + maiorDeIdade)
+console.log("2) De menor? " + menorDeIdade)
+console.log("\n3) Valor com juros: " + valorComJuros.toFixed(2))
+console.log("\n4) Média aritmética dos itens: " + media)
+console.log("\n5) Lucro Bruto (R$) e Margem Bruta (%): " + "R$" + lucroBruto)
+console.log(margemBruta + "%")
+
+
+// 6) Usando qualquer ferramenta de codificação,
+// crie um algoritmo seguindo os passos abaixo para encontrar o valor do saldo ao final do processo
+// (atente-se para utilizar . como separador decimal):
+
+// a) O saldo da sua conta é R$ 1000,00
+// b) Você decide comprar uma calça por R$ 99,90
+// c) Você recebe o seu salário de R$ 2500,00
+// d) Você está caminhando na rua e decide dar R$ 0,10 para um morador de rua
+// e) Você compra um ar condicionado cujo valor é 25% do seu saldo atual
+// f) Você decide antecipar o pagamento de uma dívida usando metade do seu saldo
+// g) Qual o valor do seu saldo?
+
+saldo = 1000.00
+console.log("\n6) Saldos. Inicial: " + saldo)
+
+calca = 99.90
+salario = 2500.00
+doacao = 0.10
+
+saldo = saldo - calca + salario - doacao
+
+console.log("Saldo Antes de Comprar o Ar: " + saldo)
+arCondicionado = 0.25 * saldo
+
+saldo = saldo - arCondicionado
+
+console.log("Saldo Pós-compra e antes de Pagar Dívida: " + saldo)
+pagaDivida = saldo / 2
+
+saldo = saldo - pagaDivida
+console.log("\nValor do saldo final: " + saldo)
