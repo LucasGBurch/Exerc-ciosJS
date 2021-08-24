@@ -1,0 +1,114 @@
+// Exemplo aula:
+
+function impri(i) {
+  console.log(i); // Procedimento, "faz algo" (s/ return)
+} // Mas basicamente também é função;
+
+function multiplicar(a, b) {
+  return (a * b); // Função = retorna algo;
+}
+
+resultado = multiplicar(3, 5)
+
+impri(resultado)
+
+// --------------------------------------------------------
+
+// Exercício da aula:
+// 1) Função para imprimir
+
+function imprimir(arg) {
+  return console.log(arg)
+} // Sem console.log, só imprimiu o último imprimir()
+
+imprimir("\n--- Exercício 1:\n")
+teste1 = "Argumento." // Variável de teste;
+imprimir(teste1) // Impressão do teste;
+
+
+// --------------------------------------------------------
+// 2)
+// 2.1: Função que retorna true se as variáveis são iguais
+
+imprimir("\n--- Exercício 2.1:\n")
+
+function mesmoNome(nomeDoFulano, nomeDoBeltrano) {
+  return nomeDoFulano == nomeDoBeltrano
+}
+
+cwi = "CWI"
+reset = "Reset"
+imprimir(mesmoNome(cwi, cwi)) // Impressão dos testes;
+imprimir(mesmoNome(cwi, reset))
+
+// --------------------------------------------------------
+// 2.2: Função que retorna true se a idade for de maior
+
+imprimir("\n--- Exercício 2.2:\n")
+
+function maiorDeIdade(idade) {
+  return idade >= 18
+}
+
+imprimir(maiorDeIdade(30)) // true
+imprimir(maiorDeIdade(18)) // true
+imprimir(maiorDeIdade(5))  // false
+
+
+// --------------------------------------------------------
+// 2.3: Função que acrescenta 10% de Juros
+
+imprimir("\n--- Exercício 2.3:\n")
+
+function valorComJuros(j) {
+  return (j * 1.1).toFixed(2)
+}
+
+imprimir(valorComJuros(100))   // 110
+imprimir(valorComJuros(984.5)) // 1082.95
+
+
+// --------------------------------------------------------
+// 2.4: Função que recebe elementos em uma Array (ou seja, ENTRE COLCHETES!!) e retorna sua média aritmética após fazer o somatório dos elementos;
+
+imprimir("\n--- Exercício 2.4:\n")
+
+function mediaAritmetica(nums = array()) {
+
+  tamanho = nums.length // Tamanho da Array-argumento;
+  cont = 0 // Contador de posições da Array inserida;
+  soma = 0 // Somatório para elaborar a média;
+
+  while(cont < tamanho){ // vai de 0 até (tamanho - 1);
+
+    soma += nums[cont] // Soma número da Array
+    cont++ // Prepara para repetir a soma no (cont + 1);
+  }
+  // Após fazer o somatório, fazemos a média dos nºs:
+  media = (soma / tamanho)
+
+  return ("Média da lista = " + media.toFixed(2))
+} // É retornada a mensagem da média com 2 casas decimais
+
+imprimir(mediaAritmetica([1]))             // 1
+imprimir(mediaAritmetica([1, 4, 10]))      // 5
+imprimir(mediaAritmetica([1, 2, 3, 4, 5])) // 3
+
+
+// --------------------------------------------------------
+
+// 2.5: Função que recebe Receita Líquida de Vendas e o Custo dos Produtos Vendidos para calcular
+// o Lucro Bruto (Receita - Custo) e retornar o valor da Margem Bruta (Lucro Bruto / Receira Líquida):
+
+imprimir("\n--- Exercício 2.5:\n")
+
+function margemBruta(receitaLiq, custoProd) {
+  lucroBruto = receitaLiq - custoProd
+  margem = (lucroBruto / receitaLiq) * 100
+  return (margem.toFixed(2) + "%")
+}
+
+imprimir(margemBruta(1000000, 500000))      // 50
+imprimir(margemBruta(528459.11, 632501.87)) // -19.68[...]
+
+// 3) O 3 são os testes impressos.
