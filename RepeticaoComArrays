@@ -1,0 +1,69 @@
+// 1) Crie um array de 5 posições com quaisquer valores.
+// Utilize qualquer estrutura de repetição.
+
+array_ex1 = ["\nExercício ", "nº ", 1, "Aula ", 8]
+
+num1 = 0
+num2 = 0
+tam1 = array_ex1.length
+
+// Com while:
+while(num1 < tam1) {
+  console.log(array_ex1[num1])
+  num1++
+}
+
+// Com do{}while:
+do {
+  console.log(array_ex1[num2])
+  num2++
+} while(num2 < tam1)
+
+// Com for:
+for(i = 0; i < tam1; i++) {
+  console.log(array_ex1[i])
+}
+
+
+// 2) Crie um algoritmo capaz de calcular a média aritmética de um array com qualquer quantidade de elementos numéricos.
+// Para fins de exemplo, o resultado do algoritmo com um array de valores 1, 2, 3, 5, 8, 13, 21, 23, 34, 55 deve ser 16.5.
+
+numEx2 = [1, 2, 3, 5, 8, 13, 21, 23, 34, 55]
+posicao = 0
+soma = 0
+tamanho = numEx2.length
+
+while(posicao < tamanho) { // de 0 a 9 (length 10)
+  soma = soma + numEx2[posicao] // Podia ser += num...
+  posicao++
+}
+
+media = (soma / tamanho)
+console.log("\nA média do Exercício 2 é:", media.toFixed(2), "para array de", tamanho, "números.")
+
+
+// Considerando a lista dos 60 nomes mais comuns no Brasil nos últimos 10 anos, crie um algoritmo para verificar se seu nome está lá.
+// Se sim, exiba a mensagem: É, nome comum :P. Se não, exiba a mensagem: Diferentão, hein? XD.
+
+nomesComuns = ["Miguel", "Laura", "Lucas", "Beatriz", "Guilherme", "Maria", "Gabriel", "Ana", "Arthur", "Júlia", 
+"Enzo", "Alice", "Rafael", "Mariana", "João", "Larissa", "Gustavo", "Maria Eduarda", "Pedro", "Sofia", 
+"Bernardo", "Isabela", "Matheus", "Helena", "Davi", "Camila", "Heitor", "Lara", "Henrique", "Valentina", 
+"Bruno", "Letícia", "Samuel", "Luana", "Felipe", "Amanda", "Lorenzo", "Yasmin", "Benjamin", "Sophia", 
+"Vinícius", "Rebeca", "Rodrigo", "Juliana", "Eduardo", "Bruna", "Diego", "Cecília", "Antônio", "Fernanda", 
+"Leonardo", "Isadora", "Noah", "Lorena", "Nícolas", "Lívia", "Daniel", "Manuela", "Thiago", "Vitória"]
+
+
+taNaLista = "Não!"
+for(j = 0; j < nomesComuns.length; j++) {
+
+  nome = "Luscas"
+  if(nomesComuns[j] === nome) {
+    console.log("\nExercício 3: É, nome comum :P")
+    taNaLista = "Sim!" // Um true com break também valeria! (visto após correção)
+    // com booleano o .log ficaria no if de baixo tb
+  }
+}
+// Fim do laço for, se não está ele imprime:
+if (taNaLista == "Não!") {
+    console.log("\nExercício 3: Diferentão, hein? XD")
+  } // PARA NÃO REPETIR TODA VEZ QUE NÃO ESTIVER!!!
